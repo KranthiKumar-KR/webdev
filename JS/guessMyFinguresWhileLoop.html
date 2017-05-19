@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Guess How many fingures using while loop</title>
+
+    <style>
+        .game {
+            height: 400px;
+            width: 450px;
+            border: 1px thick black;
+            background-color: greenyellow;
+            margin: 200;
+            padding: 30;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="game">
+        <h2 id="question">How many fingures are you holding???</h2>
+        <select id="textInput">
+        
+           <option>1</option>
+           <option>2</option>
+           <option>3</option>
+           <option>4</option>
+           <option>5</option>
+        
+        
+        </select>
+        <button id="checkTheAnswer">Enter</button>
+
+    </div>
+    <script type="text/javascript">
+        document.getElementById("checkTheAnswer").onclick = function() {
+            var userInput = document.getElementById("textInput").value;
+
+            var count = 0;
+            var guessNum = Math.ceil(Math.random() * 5);
+            while (userInput != guessNum) {
+                count++;
+                guessNum = Math.ceil(Math.random() * 5);
+            }
+            var alertValue = "Yayy! you did it after " + count + " attempts";
+            alert(alertValue);
+
+        }
+
+    </script>
+</body>
+
+</html>

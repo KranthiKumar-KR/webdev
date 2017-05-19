@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Dissappear Circles challenge</title>
+
+    <style>
+        .game {
+            height: 400px;
+            width: 400px;
+            border: 1px thick black;
+            background-color: greenyellow;
+            margin: 200;
+            padding: 30;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="game">
+        <h2 id="question">How many fingures I am holding???</h2>
+        <input id="textInput" type="number">
+        <button id="checkTheAnswer">Enter</button>
+
+    </div>
+    <script type="text/javascript">
+        document.getElementById("checkTheAnswer").onclick = function() {
+            var previousAnswer = 0;
+
+            var presentAnswer = Math.ceil((Math.random() * 5) );
+
+
+            var inputAnswer = document.getElementById("textInput").value;
+            while (presentAnswer == previousAnswer) {
+                presentAnswer = Math.ceil((Math.random() * 5) );
+            }
+
+            if (presentAnswer == inputAnswer) {
+                alert('Great!! you did it');
+                previousAnswer = presentAnswer;
+            } else if (presentAnswer != inputAnswer){
+                alert("Nope! try again, the actual number is " + presentAnswer);
+                previousAnswer = presentAnswer;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

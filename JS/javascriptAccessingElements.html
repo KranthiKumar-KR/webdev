@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title>Java script Demo</title>
+
+</head>
+
+<body>
+
+
+    <p id="text">Hello world!!!</p>
+
+    <button id="changetext">change text</button>
+
+    <p id="secondText"> java script is .....</p>
+
+    <button id="secondButton">change text</button>
+
+    <button id="appendText">append text</button>
+    <p id="thirdText"> </p>
+    <button id="thirdButton"> show text</button>
+
+    <p id="fourthpara"> Hi this is some more text!!!!</p>
+
+    <button id="changecolor">change color</button>
+
+    <button id="changefontsize">change font size</button>
+
+    <button id="changebackground">change background</button>
+
+    <button id="addborder">add border</button>
+
+    <button id="movetobottom">move to bottom</button>
+
+    <button id="addboxshadow">add shadow to box</button>
+
+</body>
+
+
+
+<script type="text/javascript">
+    document.getElementById("changetext").onclick = function() {
+
+        document.getElementById("text").innerHTML = "text changed after button clicked";
+
+    }
+
+    document.getElementById("secondButton").onclick = function() {
+        document.getElementById("secondText").innerHTML = "second button text changed";
+    }
+
+    document.getElementById("appendText").onclick = function() {
+        document.getElementById("secondText").innerHTML = "I think " + document.getElementById("secondText").innerHTML + " is fucking awesome";
+    }
+
+    document.getElementById("thirdButton").onclick = function() {
+        document.getElementById("thirdText").innerHTML = "<h1>Hi!!! I am coming from no where</h1>";
+
+    }
+
+    document.getElementById("changecolor").onclick = function() {
+        document.getElementById("fourthpara").style.color = "red";
+    }
+    document.getElementById("changefontsize").onclick = function() {
+        document.getElementById("fourthpara").style.fontSize = "35px";
+    }
+
+    document.getElementById("changebackground").onclick = function() {
+        document.getElementById("fourthpara").style.background = "yellow";
+    }
+    document.getElementById("addborder").onclick = function() {
+
+        //document.getElementById("sampe").style.border = "width style color";
+        document.getElementById("fourthpara").style.border = "20px solid green";
+    }
+
+    document.getElementById("movetobottom").onclick = function() {
+        document.getElementById("fourthpara").style.bottom = "10";
+
+    }
+
+    document.getElementById("addboxshadow").onclick = function() {
+        document.getElementById("fourthpara").style.boxShadow = "black";
+    }
+
+</script>
+
+
+</html>

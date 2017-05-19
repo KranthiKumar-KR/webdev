@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Dissappear Circles challenge</title>
+
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            margin: 71px;
+            border: 2px solid black;
+            float: left;
+            border-radius: 71px;
+        }
+        
+        #firstcircle {
+            background-color: greenyellow;
+        }
+        
+        #secondcircle {
+            background-color: red;
+        }
+        
+        #thirdcircle {
+            background-color: blue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="circle" id="firstcircle"></div>
+    <div class="circle" id="secondcircle"></div>
+    <div class="circle" id="thirdcircle"></div>
+
+</body>
+
+
+
+<script type="text/javascript">
+    document.getElementById("firstcircle").onclick = function() {
+        document.getElementById("firstcircle").style.display = "none";
+    }
+
+    document.getElementById("secondcircle").onclick = function() {
+        document.getElementById("secondcircle").style.display = "none";
+    }
+
+    document.getElementById("thirdcircle").onclick = function() {
+        document.getElementById("thirdcircle").style.display = "none";
+    }
+
+</script>
+
+
+</html>

@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Dissappear Circles challenge</title>
+
+    <style>
+        .message {
+            height: 400px;
+            width: 400px;
+            border: 1px thick black;
+            background-color: greenyellow;
+            margin: 200 200 0 200;
+            padding: 30;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="message" id="message"> </div>
+    <div class="message" id="whilecontent"> </div>
+    <script type="text/javascript">
+       var paras = "";
+        var whileLoopParas = "";
+        var greets = ["kranthi", "kumar", "polimetla"];
+        var whileLoopTweets = [ "Hi i am kranthi", "I am working at reality", "as an android developer", "near middletown connecticut"];
+        
+        for(var i = 0; i < greets.length ;i++) {
+            paras = paras + "<p>" +greets[i] + "</p>";
+        }
+        var i =0;
+        while(i< whileLoopTweets.length) {
+            whileLoopParas = whileLoopParas + "<p>" + whileLoopTweets[i] + "</p>";
+            i++;
+        }
+        
+         document.getElementById("message").innerHTML = paras;
+        document.getElementById("whilecontent").innerHTML = whileLoopParas;
+
+    </script>
+</body>
+
+</html>
