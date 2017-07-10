@@ -1,0 +1,41 @@
+<html>
+
+<head>
+
+    <title>
+        jquery demo
+    </title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style>
+        #circle {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="circle"></div>
+    <p>this is some text!!!</p>
+    <iframe src="http://www.cnn.com" width="600px" height="400px"></iframe>
+
+    <script type="text/javascript">
+        $("#circle").click(function() {
+            $("p").html("this text is updated using jquery");
+        });
+
+        $("#circle").hover(function() {
+            $("iframe").attr("src", "http://www.bbc.com");
+
+        });
+    </script>
+</body>
+
+
+
+
+</html>

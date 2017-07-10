@@ -1,0 +1,70 @@
+<html>
+
+<head>
+
+    <title>
+        jquery demo
+    </title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <style>
+        #circle {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            margin: 10px;
+        }
+        
+        .square {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin: 10;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div id="circle"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <p > you have clicked on a <span id="text"></span> </p>
+    <input id="button" type="button" value="click me">
+
+    <script type="text/javascript">
+        $("div").click(function() {
+            $(this).css("display", "none");
+            if($(this).attr("id") == "circle") {
+                $("#text").html("circle");
+            } else {
+                $("#text").html("square");
+            }
+
+        });
+        /*  $("#circle").click(function() {
+            $("#circle").css("width", "400");
+        });
+
+        $("#circle").hover(function() {
+            //if we use a key-value in css we will update that particular key with the value we have passed along with it.
+            //in this case we are passing background-color as key and yellow as the value. so we are updating the current value of the background-color to yellow.
+
+            $("#circle").css("background-color", "yellow");
+        });
+*/
+        $("#button").click(function() {
+
+            //if we just pass a single key then we will get the value of that particular key, in the below example we are just passing the key so we will we get the current value of that key, in this case the color of the circle in rgb format.
+            alert("color of circle is " + ($("#circle").css("background-color")));
+        })
+
+    </script>
+</body>
+
+
+
+
+</html>
