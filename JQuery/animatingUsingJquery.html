@@ -1,0 +1,95 @@
+<html>
+
+<head>
+
+    <title>
+        jquery Animations demo
+    </title>
+    <script type="text/javascript" src="jquery.min.js">
+
+
+    </script>
+    <style type="text/css">
+        #circle {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 20px;
+            border-radius: 50%;
+        }
+        
+        #square {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background-color: blue;
+        }
+        
+        #animate {
+            widows: 100px;
+            height: 30px;
+            text-align: center;
+            margin: 20px;
+            background-color: green;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="circle"> </div>
+    <div id="square"></div>
+    <input id="animate" type="button" value="animate">
+    <script type="text/javascript">
+        $("#circle").click(function() {
+            //alert($(this).attr("id"));
+            //$(this).css("background-color", "black");
+            $("#circle").animate({
+                width: "400px",
+                height: "400px",
+                marginLeft: "100px",
+                backgroundColor: "blue"
+            }, 2000);
+        });
+
+        $("#square").click(function() {
+            $(this).animate({
+                width: "400px",
+                height: "400px",
+                marginLeft: "500px"
+            }, 2000, function(){
+               var delta =45; $(this).style.webkitTransform="rotate('+delta+'deg)";
+        
+            }
+                           
+                           
+                           
+                           );
+        });
+        $("#animate").click(function() {
+
+            $("#circle").animate({
+                width: "400px",
+                height: "400px",
+                marginLeft: "100px",
+                backgroundColor: "blue"
+            }, 2000);
+
+                $("#square").animate({
+                    width: "400px",
+                    height: "400px",
+                    marginLeft: "500px"
+                }, 2000, function() {
+                    $(this).css("background-color", "green")});
+                })
+
+    </script>
+</body>
+
+
+
+
+</html>

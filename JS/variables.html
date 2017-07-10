@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Dissappear Circles challenge</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+    <input type="text" id="inputtext" placeholder="please enter the input">
+
+    <button id="changetext"> change text</button>
+
+    <p id="textfield"> waiting for user input</p>
+
+    <script type="text/javascript">
+        document.getElementById("changetext").onclick = function() {
+            var inputvalue = "";
+            
+            inputvalue = document.getElementById("inputtext").value;
+        
+            document.getElementById("textfield").innerHTML = inputvalue;
+        }
+
+    </script>
+</body>
+
+</html>
